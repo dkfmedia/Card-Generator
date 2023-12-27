@@ -1,1 +1,67 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: tan;
+  font-family: "Roboto Mono", monospace;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.cardBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  height: 450px;
+  width: 300px;
+  padding-top: 180px;
+  background-color: ivory;
+  color: rgb(139, 69, 19);
+  border-radius: 6%;
+  font-size: 65px;
+  position: relative;
+  &::before {
+    position: absolute;
+    padding: 10px;
+    top: 10px;
+    left: 10px;
+  }
+
+  &::after {
+    position: absolute;
+    padding: 10px;
+    bottom: 10px;
+    right: 10px;
+    transform: rotateX(180deg);
+  }
+
+  &.spades::before,
+  &.spades::after {
+    content: "♠";
+  }
+
+  &.clubs::before,
+  &.clubs::after {
+    content: "♣";
+  }
+
+  &.hearts::before,
+  &.hearts::after {
+    content: "♥";
+    color: rgb(180, 29, 29);
+  }
+  &.diamonds::before,
+  &.diamonds::after {
+    content: "♦";
+    color: rgb(180, 29, 29);
+  }
+}
+
+#btn {
+  background-color: rgb(222, 184, 135);
+  color: rgb(139, 69, 19);
+}
+
+span {
+  color: rgb(139, 69, 19);
+}
